@@ -21,27 +21,31 @@ function render() {
 
 document.querySelectorAll(".btn-up").forEach(function (btn) {
   btn.addEventListener("click", () => {
-    if (btn.id == "hours-up") {
-      time.setHours(time.getHours() + 1);
-    } else if (btn.id == "minutes-up") {
-      time.setMinutes(time.getMinutes() + 1);
-    } else {
-      time.setSeconds(time.getSeconds() + 1);
+    if(!clicked) {
+      if (btn.id == "hours-up") {
+        time.setHours(time.getHours() + 1);
+      } else if (btn.id == "minutes-up") {
+        time.setMinutes(time.getMinutes() + 1);
+      } else {
+        time.setSeconds(time.getSeconds() + 1);
+      }
+      render();
     }
-    render();
   });
 });
 
 document.querySelectorAll(".btn-down").forEach(function (btn) {
   btn.addEventListener("click", () => {
-    if (btn.id == "hours-down") {
-      time.setHours(time.getHours() - 1);
-    } else if (btn.id == "minutes-down") {
-      time.setMinutes(time.getMinutes() - 1);
-    } else {
-      time.setSeconds(time.getSeconds() - 1);
+    if(!clicked) {
+      if (btn.id == "hours-down") {
+        time.setHours(time.getHours() - 1);
+      } else if (btn.id == "minutes-down") {
+        time.setMinutes(time.getMinutes() - 1);
+      } else {
+        time.setSeconds(time.getSeconds() - 1);
+      }
+      render();
     }
-    render();
   });
 });
 
@@ -54,13 +58,22 @@ document.querySelector("#start").addEventListener("click", () => {
         time.getMinutes() == 0 &&
         time.getSeconds() == 0
       ) {
+        document.querySelectorAll('.arow').forEach(function (btn) {
+          btn.classList.add('if-cliced')
+        })
         clearInterval(startTimer);
         clicked = false;
       } else {
+        document.querySelectorAll('.arow').forEach(function (btn) {
+          btn.classList.remove('if-cliced')
+        })
         time.setSeconds(time.getSeconds() - 1);
       }
 
       document.querySelector("#stop").addEventListener("click", function () {
+        document.querySelectorAll('.arow').forEach(function (btn) {
+          btn.classList.add('if-cliced')
+        })
         clicked = false;
         clearInterval(startTimer);
       });
@@ -69,6 +82,11 @@ document.querySelector("#start").addEventListener("click", () => {
         time.setHours(0);
         time.setMinutes(0);
         time.setSeconds(0);
+
+        document.querySelectorAll('.arow').forEach(function (btn) {
+          btn.classList.add('if-cliced')
+        })
+
         clicked = false;
         render();
         clearInterval(startTimer);
@@ -84,5 +102,10 @@ document.querySelector("#reaset").addEventListener("click", function () {
     time.setMinutes(0);
     time.setSeconds(0);
     clicked = false;
+
+    document.querySelectorAll('.arow').forEach(function (btn) {
+      btn.classList.add('if-cliced')
+    })
+
     render();
   });
