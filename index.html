@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/hourglass.png">
     <link rel="stylesheet" href="./css/index.css">
-    <title>Document</title>
+    <title>Timer</title>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <div class="time-box">
             <div class="time">
 
-                <button class="btn-up arow" id="hours-up">
+                <button class="btn-up arow if-cliced" id="hours-up">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-caret-up-fill" viewBox="0 0 16 16">
                         <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
@@ -23,7 +24,7 @@
     
                 <div class="hours">00</div>
     
-                <button class="btn-down arow" id="hours-down">
+                <button class="btn-down arow if-cliced" id="hours-down">
     
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-caret-down-fill" viewBox="0 0 16 16">
@@ -37,7 +38,7 @@
     
             <div class="time">
     
-                <button class="btn-up arow" id="minutes-up">
+                <button class="btn-up arow if-cliced" id="minutes-up">
     
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-caret-up-fill" viewBox="0 0 16 16">
@@ -48,7 +49,7 @@
     
                 <div class="minutes">00</div>
     
-                <button class="btn-down arow" id="minutes-down">
+                <button class="btn-down arow if-cliced" id="minutes-down">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
@@ -58,14 +59,14 @@
             </div>
     
             <div class="time">
-                <button class="btn-up arow" id="secende-up">
+                <button class="btn-up arow if-cliced" id="secende-up">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-caret-up-fill" viewBox="0 0 16 16">
                         <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
                     </svg>
                 </button>
                 <div class="secends">00</div>
-                <button class="btn-down arow" id="secende-down">
+                <button class="btn-down arow if-cliced" id="secende-down">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
@@ -78,7 +79,7 @@
         </div>
         <div class="buttonFunctins">
             <button id="start">Start</button>
-            <button id="stop">Stop</button>
+            <button id="stop">Pause</button>
             <button id="reaset">Reaset</button>
         </div>
     </div>
