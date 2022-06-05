@@ -40,6 +40,7 @@ body {
     content: ':';
 }
 .arow{
+    cursor: pointer;
     background: transparent;
     border: none;
     color: rgba(255, 255, 255, 0.452);
@@ -56,6 +57,7 @@ body {
 }
 
 .buttonFunctins button{
+    cursor: pointer;
     background :transparent;
     border: none;
     outline: none;
